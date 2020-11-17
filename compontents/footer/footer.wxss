@@ -1,0 +1,11 @@
+/* compontents/footer/footer.wxss */
+.footer{
+  position: fixed;
+  bottom: 20rpx;
+  text-align: center;
+  left: 0;
+  right: 0;
+  color: #5c6bc0;
+  font-size: 24rpx;
+  font-weight: bold;
+}

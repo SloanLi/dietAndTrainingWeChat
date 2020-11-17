@@ -1,13 +1,30 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像sads昵称 </button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="body_box">
+    <view class="body_item">
+      <text class="item_name">阶段</text>
+      <text class="item_value">塑形</text>
+    </view>
+    <view class="body_item">
+      <text class="item_name">体重</text>
+      <text class="item_value">73.5kg</text>
+    </view>
+    <view class="body_item">
+      <text class="item_name">身高</text>
+      <text class="item_value">173cm</text>
+    </view>
+    <view class="body_item">
+      <text class="item_name">BMI</text>
+      <text class="item_value">24</text>
+    </view>
+
   </view>
+ <dt_footer/>
 </view>

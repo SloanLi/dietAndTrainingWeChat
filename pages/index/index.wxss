@@ -1,21 +1,126 @@
 /**index.wxss**/
 .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  height: auto;
+  width: calc(100% - 40rpx);
+  background: #5c6bc0;
+  border-radius: 10rpx;
+  padding: 20rpx;
 }
-
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
   border-radius: 50%;
+  vertical-align: middle;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color: whitesmoke;
+  vertical-align: middle;
+margin-left: 30rpx;
 }
 
 .usermotto {
   margin-top: 200px;
+}
+.body_info_box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
+  margin-top: 20rpx;
+  padding: 20rpx 0rpx;
+}
+.body_info_box .body_info_item{
+  width: 24%;
+  display: inline-block;
+  border-right:1px solid  whitesmoke;
+}
+.body_info_item text{
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.body_info_item{
+  font-size: 28rpx;
+}
+.body_info_item .item_name{
+  color:#bbbbbb;
+
+}
+.body_info_item .item_value{
+  color:#5c6bc0;
+  margin-top: 15rpx;
+  font-weight: bold;
+}
+.tab{
+  margin-top: 20rpx;
+  padding: 0rpx 40rpx;
+}
+.tab_btn_box{
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height:70rpx;
+  text-align: center;
+}
+.tab_btn_box .active{
+  color: #5c6bc0;
+  border-bottom: 10rpx solid #5c6bc0;
+}
+.tab_btn{
+  padding: 0rpx 20rpx;
+  display: inline-block;
+  transition: all 0.2s linear;
+}
+.tab_item{
+  margin-top: 50rpx;
+}
+.diet_box{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100rpx;
+}
+.diet_box .diet_item{
+  display: inline-block;
+  padding: 20rpx 40rpx;
+  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
+
+}
+.diet_item .diet_text{
+  display: block;
+
+}
+.diet_item .diet_label{
+  font-size: 28rpx;
+  color: #bbbbbb;
+
+}
+.diet_item .diet_value{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #5c6bc0;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.train_box{
+  margin-bottom: 10rpx;
+}
+.tips{
+  margin-top: 50rpx;
+font-size: 28rpx;
+color: #bbbbbb;
+display: inline-block;
+width: 100%;
+}
+.tips text{
+  vertical-align: top;
+  display: inline-block;
+}
+.tips_left{
+font-weight: bold;
+  color: #5c6bc0;
+}
+.tips_right{
+  width: 80%;
 }

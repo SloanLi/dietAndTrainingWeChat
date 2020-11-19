@@ -1,13 +1,32 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/regist/regist",
+    "pages/mine/mine"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "subpackages": [
+    {
+      "root": "diet",
+      "name": "diet",
+      "pages": [
+        "index/index"
+      ]
+    },
+    {
+      "root": "train",
+      "name": "train",
+      "pages": [
+        "index/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

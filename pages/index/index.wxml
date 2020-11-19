@@ -3,11 +3,64 @@
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image bindtap="toMine" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="body_info_box">
+    <view class="body_info_item" bindtap="toMine">
+      <text class="item_name">阶段</text>
+      <text class="item_value">{{phaseDict[bodyInfo.phase]}}</text>
+    </view>
+    <view class="body_info_item" bindtap="toMine">
+      <text class="item_name">体重（kg）</text>
+      <text class="item_value">{{bodyInfo.weight}}</text>
+    </view>
+    <view class="body_info_item" bindtap="toMine">
+      <text class="item_name">身高（cm）</text>
+      <text class="item_value">{{bodyInfo.height}}</text>
+    </view>
+    <view class="body_info_item" bindtap="toMine">
+      <text class="item_name">BMI</text>
+      <text class="item_value">{{bodyInfo.bmi}}</text>
+    </view>
   </view>
+  <view class="tab">
+    <view class="tab_btn_box">
+      <view class="tab_btn {{activeTab==='diet'?'active':''}}" data-value="diet" bindtap="getActiveTab">饮食</view>
+      <view class="tab_btn ml {{activeTab==='train'?'active':''}}" data-value="train" bindtap="getActiveTab">训练</view>
+    </view>
+    <!-- 饮食 -->
+    <view class="tab_item" hidden="{{activeTab==='train'}}">
+      <view class="diet_box " >
+        <view  class="diet_item" bindtap="toDiet">
+          <text class="diet_label diet_text">摄入热量：</text>
+          <text class="diet_value diet_text">1588cal</text>
+        </view>
+        <view  class="diet_item" bindtap="toDiet">
+          <text class="diet_label diet_text">剩余热量：</text>
+          <text class="diet_value diet_text">1588cal</text>
+        </view>
+      </view>
+      <button bindtap="toDiet">饮食管理</button>
+      <view class="tips">
+        <text  class="tips_left">Tips：</text>
+        <text  class="tips_right">{{currentDietTips}}</text>
+      </view>
+    </view>
+    <!-- 训练 -->
+    <view class="tab_item" hidden="{{activeTab==='diet'}}">
+      <view class="train_box" >
+        <dt_content_row label="哑铃推举" value='40kg' bind:rowTap="toTrain" />
+      </view>
+      <button bindtap="toTrain">训练管理</button>
+      <view class="tips">
+        <text  class="tips_left">Tips：</text>
+        <text  class="tips_right">{{currentTrainTips}}</text>
+      </view>
+    </view>
+   
+
+  </view>
+ <dt_footer/>
 </view>

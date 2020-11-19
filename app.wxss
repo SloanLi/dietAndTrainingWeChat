@@ -4,3 +4,15 @@
   box-sizing: border-box;
   padding: 10rpx;
 } 
+.ml{
+  margin-left: 20rpx;
+}
+button{
+  color:whitesmoke;
+  background: #5c6bc0;
+  width: 200px;
+  letter-spacing: 10rpx;
+}
+.danger_btn{
+  background: #ec2c61;
+}

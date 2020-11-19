@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/home/home",
-    "pages/regist/regist"
+    "pages/regist/regist",
+    "pages/mine/mine"
   ],
   "subpackages": [
     {

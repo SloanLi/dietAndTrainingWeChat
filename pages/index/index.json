@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "dt_footer":"/compontents/footer/footer"
+    "dt_footer":"/compontents/footer/footer",
+    "dt_content_row":"/compontents/contentRow"
+
   }
 }

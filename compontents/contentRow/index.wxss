@@ -1,0 +1,10 @@
+/* compontents/contentRow/index.wxss */
+.row{
+  line-height: 60rpx;
+  border-bottom: 1px solid whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  padding:10rpx 40rpx;
+  font-size: 28rpx;
+
+}

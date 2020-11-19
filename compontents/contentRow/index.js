@@ -4,14 +4,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-label:{
-  type:String,
-  value:''
-},
-value:{
-  type:String,
-  value:''
-}
+    label:{
+      type:String,
+      value:''
+    },
+    value:{
+      type:String,
+      value:''
+    }
   },
 
   /**

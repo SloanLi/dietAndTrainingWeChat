@@ -1,0 +1,22 @@
+{
+  "name": "dietandtrain",
+  "version": "1.0.0",
+  "description": "记录训练以及饮食的微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SloanLi/dietAndTrainingWeChat.git"
+  },
+  "author": "Sloan Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SloanLi/dietAndTrainingWeChat/issues"
+  },
+  "homepage": "https://github.com/SloanLi/dietAndTrainingWeChat#readme",
+  "dependencies": {
+    "weui-miniprogram": "^1.0.6"
+  }
+}

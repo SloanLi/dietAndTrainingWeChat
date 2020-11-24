@@ -1,10 +1,38 @@
 /* compontents/contentRow/index.wxss */
+@import '/app.wxss';
 .row{
-  line-height: 60rpx;
   border-bottom: 1px solid whitesmoke;
-  display: flex;
-  justify-content: space-between;
-  padding:10rpx 40rpx;
   font-size: 28rpx;
 
+width: 100%;
+white-space: nowrap;
+scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-x: auto;
+  line-height: 80rpx;
+}
+.left,.right{
+  display: inline-block;
+
+}
+.left{
+  width: 100%;
+
+}
+.left_text_box{
+  color: #bbbbbb;
+  display: flex;
+  justify-content: space-between;
+  padding:0rpx 40rpx;
+
+}
+.right{
+  
+  background:#ec2c61 ;
+color: whitesmoke;
+text-align: center;
+font-weight: bold;
+letter-spacing: 10rpx;
+padding-left: 20rpx;
+padding-right: 10rpx;
 }

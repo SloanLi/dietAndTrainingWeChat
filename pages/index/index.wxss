@@ -77,32 +77,68 @@ margin-left: 30rpx;
   margin-top: 50rpx;
 }
 .diet_box{
+  box-shadow: 8rpx 8rpx 8rpx whitesmoke;
+  margin: 50rpx;
+  padding: 20rpx;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 100rpx;
 }
-.diet_box .diet_item{
-  display: inline-block;
-  padding: 20rpx 40rpx;
-  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
-
-}
-.diet_item .diet_text{
+.diet_remain .remain_text{
   display: block;
 
 }
-.diet_item .diet_label{
+.diet_remain .remain_label{
   font-size: 28rpx;
   color: #bbbbbb;
 
 }
-.diet_item .diet_value{
+.diet_remain .remain_value{
   font-size: 28rpx;
   font-weight: bold;
   color: #5c6bc0;
   text-align: center;
   margin-top: 20rpx;
 }
+.diet_statistical{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.statistical__bar_box{
+  height: 100rpx;
+  background: #e2e2e2;
+  width: 10rpx;
+  border-radius: 5rpx;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.statistical__bar{
+  background: #5c6bc0;
+  border-radius: 5rpx;
+width: 100%;
+height: 80rpx;
+position: absolute;
+bottom: 0;
+display: block;
+
+}
+.statistical__label{
+  color: #bbbbbb;
+  font-size: 28rpx;
+}
+/* .diet_box{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100rpx;
+} */
+/* .diet_box .diet_item{
+  display: inline-block;
+  padding: 20rpx 40rpx;
+  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
+
+}
+ */
 .train_box{
   margin-bottom: 10rpx;
 }

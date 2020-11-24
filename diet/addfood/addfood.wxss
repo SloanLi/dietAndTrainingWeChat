@@ -1,0 +1,8 @@
+/* diet/addfood/addfood.wxss */
+.container{
+  height: 100vh;
+}
+.main_box{
+  max-height: 85vh;
+  overflow-y: auto;
+}

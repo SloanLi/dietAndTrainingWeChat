@@ -1,2 +1,102 @@
-<!--diet/index/index.wxml-->
-<text>diet/index/index.wxml</text>
+<view class="container">
+  <!-- <view class="container_title">时间选择</view> -->
+  <view class="diet_box " >
+    <view  class="diet_item" bindtap="toDiet">
+      <text class="diet_label diet_text">摄入：</text>
+      <text class="diet_value diet_text">{{totalCalories}}</text>
+    </view>
+    <view  class="diet_item" bindtap="toDiet">
+      <text class="diet_label diet_text">还可以吃：</text>
+      <text class="diet_value diet_text {{budgetCalories<totalCalories?'redfont':''}}">{{budgetCalories-totalCalories}}</text>
+    </view>
+    <view  class="diet_item" bindtap="toDiet">
+      <text class="diet_label diet_text">推荐预算：</text>
+      <text class="diet_value diet_text">{{budgetCalories}}</text>
+    </view>
+  </view>
+  <view class="diet_detail" wx:if="{{totalCalories!==0}}">
+    <view class="diet_detail_item" wx:if="{{breakfast.list.length>0}}">
+      <view class="diet_detail_item_title">
+        <view class="title_left">
+          <text class="diet_name">早餐</text>
+          <text class="diet_tips">{{'建议 '+breakfast.min+' ~ '+breakfast.max}}</text>
+        </view>
+        <text class="valuefont {{breakfast.calories>breakfast.max?'redfont':''}}">{{breakfast.calories}}</text>
+      </view>
+      <dt_content_row wx:for="{{breakfast.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
+    </view>
+    <view class="diet_detail_item" wx:if="{{morning.list.length>0}}">
+      <view class="diet_detail_item_title">
+        <view class="title_left">
+          <text class="diet_name">上午加餐</text>
+          <text class="diet_tips">{{'建议 '+morning.min+' ~ '+morning.max}}</text>
+        </view>
+        <text class="valuefont {{morning.calories>morning.max?'redfont':''}}">{{morning.calories}}</text>
+      </view>
+      <dt_content_row wx:for="{{morning.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
+    </view>
+    <view class="diet_detail_item" wx:if="{{lunch.list.length>0}}">
+      <view class="diet_detail_item_title">
+        <view class="title_left">
+          <text class="diet_name">午餐</text>
+          <text class="diet_tips">{{'建议 '+lunch.min+' ~ '+lunch.max}}</text>
+        </view>
+        <text class="valuefont {{lunch.calories>lunch.max?'redfont':''}}">{{lunch.calories}}</text>
+      </view>
+      <dt_content_row wx:for="{{lunch.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
+    </view>
+    <view class="diet_detail_item" wx:if="{{afternoon.list.length>0}}">
+      <view class="diet_detail_item_title">
+        <view class="title_left">
+          <text class="diet_name">下午加餐</text>
+          <text class="diet_tips">{{'建议 '+afternoon.min+' ~ '+afternoon.max}}</text>
+        </view>
+        <text class="valuefont {{afternoon.calories>afternoon.max?'redfont':''}}">{{afternoon.calories}}</text>
+      </view>
+      <dt_content_row wx:for="{{afternoon.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
+    </view>
+    <view class="diet_detail_item" wx:if="{{dinner.list.length>0}}">
+      <view class="diet_detail_item_title">
+        <view class="title_left">
+          <text class="diet_name">晚餐</text>
+          <text class="diet_tips">{{'建议 '+dinner.min+' ~ '+dinner.max}}</text>
+        </view>
+        <text class="valuefont {{dinner.calories>dinner.max?'redfont':''}}">{{dinner.calories}}</text>
+      </view>
+      <dt_content_row wx:for="{{dinner.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
+    </view>
+    <view class="diet_detail_item" wx:if="{{evening.list.length>0}}">
+      <view class="diet_detail_item_title">
+        <view class="title_left">
+          <text class="diet_name">晚上加餐</text>
+          <text class="diet_tips">{{'建议 '+evening.min+' ~ '+evening.max}}</text>
+        </view>
+        <text class="valuefont {{evening.calories>evening.max?'redfont':''}}">{{evening.calories}}</text>
+      </view>
+      <dt_content_row wx:for="{{evening.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
+    </view>
+    <view class="diet_analysis"> 
+      <button class="">饮食分析</button>
+      <text class="tips">完整录入三餐才准确</text>
+    </view>
+  </view>
+  <view class="nodata" wx:else>
+    您还没有录入饮食，快去录入吧
+  </view>
+  <view class="add_box">
+    <view class="add_item">
+      <text class="valuefont" data-type="1" bindtap="getAddFoodType">+早餐</text>
+    </view>
+    <view class="add_item">
+      <text class="valuefont" data-type="2" bindtap="getAddFoodType">+午餐</text>
+    </view>
+    <view class="add_item">
+      <text class="valuefont" data-type="3" bindtap="getAddFoodType">+晚餐</text>
+    </view>
+    <view class="add_item">
+      <text class="valuefont" bindtap="showActionSheet">+加餐</text>
+    </view>
+  </view>
+  <mp-actionSheet bindactiontap="getActionSheedType" show="{{actionSheetShow}}" actions="{{actionSheetGroups}}" title="加餐">
+  </mp-actionSheet>
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar",
+    "dt_footer":"/compontents/footer/footer",
+    "dt_content_row":"/compontents/contentRow",
+    "mp-halfScreenDialog ": "/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog"
+  },
+  "navigationBarTitleText": "添加饮食"
+}

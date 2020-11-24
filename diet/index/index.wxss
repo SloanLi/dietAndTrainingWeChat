@@ -1,1 +1,90 @@
 /* diet/index/index.wxss */
+.container{
+  padding: 20rpx 0rpx;
+}
+.diet_box{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50rpx;
+}
+.diet_box .diet_item{
+  display: inline-block;
+  padding: 20rpx 40rpx;
+  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
+
+}
+.diet_item .diet_text{
+  display: block;
+
+}
+.diet_item .diet_label{
+  font-size: 28rpx;
+  color: #bbbbbb;
+
+}
+.diet_item .diet_value{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #5c6bc0;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.diet_detail{
+  padding-bottom: 50rpx;
+}
+.diet_detail_item{
+  margin-bottom: 20rpx;
+}
+.diet_detail_item_title{
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 40rpx;
+}
+.diet_name{
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.diet_tips{
+  color: #bbbbbb;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  vertical-align: bottom;
+}
+.diet_analysis{
+  margin:50rpx 0rpx;
+  text-align: center;
+}
+.diet_analysis .tips{
+  color: #bbbbbb;
+  font-size: 24rpx;
+  font-weight: bold;
+margin-top: 30rpx;
+display: inline-block;
+}
+.nodata{
+  color: #bbbbbb;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 100rpx;
+}
+.add_box{
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  color: #5c6bc0;
+  padding:10rpx 0rpx;
+  box-shadow: 4rpx 4rpx 20rpx #bbbbbb;
+}
+.add_box .add_item{
+  width: 25%;
+  display: inline-block;
+}
+.add_item .valuefont{
+  line-height: 80rpx;
+  border-right: 1px solid whitesmoke;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}

@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
 .container {
   height: 100%;
   box-sizing: border-box;
@@ -15,4 +16,15 @@ button{
 }
 .danger_btn{
   background: #ec2c61;
+}
+.line{
+display: inline-block;
+}
+.valuefont{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #5c6bc0;
+}
+.redfont{
+  color:#ec2c61 !important;
 }

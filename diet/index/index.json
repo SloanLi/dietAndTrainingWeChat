@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "dt_footer":"/compontents/footer/footer",
+    "dt_content_row":"/compontents/contentRow",
+    "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet"
+
+  }
 }

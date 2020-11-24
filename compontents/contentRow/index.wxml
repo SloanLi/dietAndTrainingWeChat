@@ -1,5 +1,13 @@
 <!--compontents/contentRow/index.wxml-->
-<view class="row" bindtap="onRowTap">
-  <text>{{label}}</text>
-<text>{{value}}</text></view>
-
+<view class="row" >
+  <view class="left" bindtap="onRowLeftTap">
+    <view class="left_text_box">
+      <text>{{label}}</text>
+      <text class="valuefont">{{value}}</text>
+    </view>
+   
+  </view>
+  <view class="right" bindtap="onDelTap">
+    <text>删除</text>
+  </view>
+</view>

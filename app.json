@@ -11,7 +11,8 @@
       "root": "diet",
       "name": "diet",
       "pages": [
-        "index/index"
+        "index/index",
+        "addfood/addfood"
       ]
     },
     {

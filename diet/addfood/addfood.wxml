@@ -1,0 +1,7 @@
+<view class="container">
+  <mp-searchbar bindselectresult="selectResult" search="{{search}}"/>
+  <view class="main_box">
+    <dt_content_row/>
+  </view>
+  <dt_footer/>
+</view>

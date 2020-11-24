@@ -5,7 +5,56 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    totalCalories:400,
+    budgetCalories:2100,
+    // 早餐
+    breakfast:{
+      list:[{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'}],
+      min:500,
+      max:800,
+      calories:800,
+    },
+    // 上午加餐
+    morning:{
+         list:[{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'}],
+      min:500,
+      max:800,
+      calories:500,
+    },
+    // 午餐
+    lunch:{
+         list:[{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'}],
+      min:500,
+      max:800,
+      calories:500,
+    },
+    // 下午加餐
+    afternoon:{
+         list:[{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'}],
+      min:500,
+      max:800,
+      calories:500,
+    },
+    // 晚餐
+    dinner:{
+         list:[{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'}],
+      min:500,
+      max:800,
+      calories:500
+    },
+    // 晚上加餐
+    evening:{
+         list:[{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'},{name:"牛奶",calories:"148",count:'100ml'}],
+      min:500,
+      max:800.,
+      calories:500
+    },
+    actionSheetShow: false,
+    actionSheetGroups: [
+        { text: '上午加餐', value: 4 },
+        { text: '下午加餐', value: 5 },
+        { text: '晚上加餐',  value: 6 }
+    ]
   },
 
   /**
@@ -62,5 +111,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getAddFoodType(e){
+  this.toAddFood(e.target.dataset.type)
+
+  },
+  getActionSheedType(e){
+  this.toAddFood(e.detail.value)
+  },
+  toAddFood(type){
+    wx.navigateTo({
+      url: '../addfood/addfood?type='+type,
+    })
+  },
+  showActionSheet(){
+    this.setData({
+      actionSheetShow:true
+    })
   }
 })

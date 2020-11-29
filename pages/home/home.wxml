@@ -1,3 +1,0 @@
-<!--pages/home/home.wxml-->
-<button bindtap="toDiet">Diet</button>
-  <button bindtap="toTrain">Train</button>

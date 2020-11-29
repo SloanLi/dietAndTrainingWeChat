@@ -4,5 +4,6 @@
     "dt_content_row":"/compontents/contentRow",
     "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet"
 
-  }
+  },
+  "navigationBarTitleText": "今日饮食"
 }

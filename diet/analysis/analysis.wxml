@@ -1,0 +1,103 @@
+<view class="container">
+  <view class="diet_detail_item">
+    <view class="diet_detail_item_title">
+        <text class="diet_name">饮食总结</text>
+    </view>
+    <view class="shadow process_box">
+            <view class="process_item" wx:for="{{processList}}" wx:for-item="item" wx:key="index" >
+              <view class="process">
+                <span class="process_span  {{item.index<process/25}}" style="width:{{item.index<process/25?'100%':item.index>process/25+1?'0%':process%25+'%'}}"></span>
+              </view>
+              <text class="valuefont process_text  {{process/25<item.index&&process/25+1>item.index?'process_active':''}}">{{item.label}}</text>
+            </view>
+        </view>
+  </view>
+  <view class="diet_detail_item">
+    <view class="diet_detail_item_title">
+        <text class="diet_name">热量比摄入</text>
+    </view>
+    <view class="shadow rate">
+      <view class="echarts_box">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ rateEc }}"/>
+      </view>
+      <view class="rate_box">
+        <view class="rate_item">
+          <text class="rate_item_title valuefont">名称</text>
+          <text class="rate_item_text">早餐</text>
+          <text class="rate_item_text">午餐</text>
+          <text class="rate_item_text">晚餐</text>
+          <text class="rate_item_text">加餐</text>         
+        </view>   
+        <view class="rate_item">
+          <text class="rate_item_title valuefont">摄入（千卡）</text>
+          <text class="rate_item_text">300</text>
+          <text class="rate_item_text">300</text>
+          <text class="rate_item_text">300</text>
+          <text class="rate_item_text">300</text>         
+        </view>   
+        <view class="rate_item">
+          <text class="rate_item_title valuefont">推荐（千卡）</text>
+          <text class="rate_item_text">400~500</text>
+          <text class="rate_item_text">700~900</text>
+          <text class="rate_item_text">700~900</text>
+          <text class="rate_item_text">200~300</text>         
+        </view>  
+      </view>
+    </view>
+  </view>
+  <view class="diet_detail_item">
+    <view class="diet_detail_item_title">
+        <text class="diet_name">三大营养素分析</text>
+    </view>
+    <view class="shadow rate">
+      <view class="echarts_box">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ nutrintEc }}"/>
+      </view>
+      <view class="rate_box">
+        <view class="rate_item">
+          <text class="rate_item_title valuefont">名称</text>
+          <text class="rate_item_text">脂肪</text>
+          <text class="rate_item_text">蛋白质</text>
+          <text class="rate_item_text">碳水</text>      
+        </view>   
+        <view class="rate_item">
+          <text class="rate_item_title valuefont">摄入（克）</text>
+          <text class="rate_item_text">300</text>
+          <text class="rate_item_text">300</text>
+          <text class="rate_item_text">300</text>      
+        </view>   
+        <view class="rate_item">
+          <text class="rate_item_title valuefont">推荐（克）</text>
+          <text class="rate_item_text">400~500</text>
+          <text class="rate_item_text">700~900</text>
+          <text class="rate_item_text">700~900</text>   
+        </view>    
+      </view>
+    </view>
+  </view>
+  <view class="diet_detail_item">
+    <view class="diet_detail_item_title">
+        <text class="diet_name">其他营养素分析</text>
+    </view>
+    <view class="shadow rate_box">
+      <view class="rate_item">
+        <text class="rate_item_title valuefont">名称</text>
+        <text class="rate_item_text">脂肪</text>
+        <text class="rate_item_text">蛋白质</text>
+        <text class="rate_item_text">碳水</text>      
+      </view>   
+      <view class="rate_item">
+        <text class="rate_item_title valuefont">摄入（克）</text>
+        <text class="rate_item_text">300</text>
+        <text class="rate_item_text">300</text>
+        <text class="rate_item_text">300</text>      
+      </view>   
+      <view class="rate_item">
+        <text class="rate_item_title valuefont">推荐（克）</text>
+        <text class="rate_item_text">400~500</text>
+        <text class="rate_item_text">700~900</text>
+        <text class="rate_item_text">700~900</text>   
+      </view>    
+    </view>
+  </view>
+</view>

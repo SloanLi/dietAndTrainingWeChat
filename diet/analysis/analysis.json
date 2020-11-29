@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../compontents/ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "饮食分析"
+}

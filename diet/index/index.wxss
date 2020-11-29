@@ -10,11 +10,11 @@
 .diet_box .diet_item{
   display: inline-block;
   padding: 20rpx 40rpx;
-  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
 
 }
 .diet_item .diet_text{
   display: block;
+  text-align: center;
 
 }
 .diet_item .diet_label{
@@ -23,10 +23,6 @@
 
 }
 .diet_item .diet_value{
-  font-size: 28rpx;
-  font-weight: bold;
-  color: #5c6bc0;
-  text-align: center;
   margin-top: 20rpx;
 }
 .diet_detail{
@@ -43,6 +39,8 @@
 .diet_name{
   font-weight: bold;
   font-size: 32rpx;
+  border-left: 10rpx #5c6bc0 solid;
+  padding-left: 15rpx;
 }
 .diet_tips{
   color: #bbbbbb;

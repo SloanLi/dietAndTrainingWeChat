@@ -1,8 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/home/home",
     "pages/regist/regist",
     "pages/mine/mine"
   ],
@@ -12,7 +10,8 @@
       "name": "diet",
       "pages": [
         "index/index",
-        "addfood/addfood"
+        "addfood/addfood",
+        "analysis/analysis"
       ]
     },
     {

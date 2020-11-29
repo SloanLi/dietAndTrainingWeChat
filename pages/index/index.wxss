@@ -27,7 +27,6 @@ margin-left: 30rpx;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
   margin-top: 20rpx;
   padding: 20rpx 0rpx;
 }
@@ -49,9 +48,7 @@ margin-left: 30rpx;
 
 }
 .body_info_item .item_value{
-  color:#5c6bc0;
   margin-top: 15rpx;
-  font-weight: bold;
 }
 .tab{
   margin-top: 20rpx;
@@ -73,12 +70,7 @@ margin-left: 30rpx;
   display: inline-block;
   transition: all 0.2s linear;
 }
-.tab_item{
-  margin-top: 50rpx;
-}
 .diet_box{
-  box-shadow: 8rpx 8rpx 8rpx whitesmoke;
-  margin: 50rpx;
   padding: 20rpx;
   display: flex;
   justify-content: space-around;
@@ -127,20 +119,8 @@ display: block;
   color: #bbbbbb;
   font-size: 28rpx;
 }
-/* .diet_box{
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 100rpx;
-} */
-/* .diet_box .diet_item{
-  display: inline-block;
-  padding: 20rpx 40rpx;
-  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
-
-}
- */
-.train_box{
-  margin-bottom: 10rpx;
+.train_box,.diet_box{
+  margin-bottom: 50rpx;
 }
 .tips{
   margin-top: 50rpx;
@@ -152,10 +132,6 @@ width: 100%;
 .tips text{
   vertical-align: top;
   display: inline-block;
-}
-.tips_left{
-font-weight: bold;
-  color: #5c6bc0;
 }
 .tips_right{
   width: 80%;

@@ -3,5 +3,10 @@
   <view class="main_box">
     <dt_content_row/>
   </view>
+  <view class="btn_box">
+    <button>完成</button>
+    <button class="cancel_btn" bindtap="goBack">取消</button>
+  </view>
+  
   <dt_footer/>
 </view>

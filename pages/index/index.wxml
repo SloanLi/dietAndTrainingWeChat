@@ -7,22 +7,22 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="body_info_box">
+  <view class="body_info_box shadow">
     <view class="body_info_item" bindtap="toMine">
       <text class="item_name">阶段</text>
-      <text class="item_value">{{phaseDict[bodyInfo.phase]}}</text>
+      <text class="item_value valuefont">{{phaseDict[bodyInfo.phase]}}</text>
     </view>
     <view class="body_info_item" bindtap="toMine">
       <text class="item_name">体重（kg）</text>
-      <text class="item_value">{{bodyInfo.weight}}</text>
+      <text class="item_value valuefont">{{bodyInfo.weight}}</text>
     </view>
     <view class="body_info_item" bindtap="toMine">
       <text class="item_name">身高（cm）</text>
-      <text class="item_value">{{bodyInfo.height}}</text>
+      <text class="item_value valuefont">{{bodyInfo.height}}</text>
     </view>
     <view class="body_info_item" bindtap="toMine">
       <text class="item_name">BMI</text>
-      <text class="item_value">{{bodyInfo.bmi}}</text>
+      <text class="item_value valuefont">{{bodyInfo.bmi}}</text>
     </view>
   </view>
   <view class="tab">
@@ -32,7 +32,7 @@
     </view>
     <!-- 饮食 -->
     <view class="tab_item" hidden="{{activeTab==='train'}}">
-      <view class="diet_box" bindtap="toDiet">
+      <view class="diet_box shadow" bindtap="toDiet">
         <view class="diet_remain line">
           <text class="remain_label remain_text">还可以吃：</text>
           <text class="remain_value remain_text">500</text>
@@ -71,7 +71,7 @@
       </view>
       <button bindtap="toTrain">训练管理</button>
       <view class="tips">
-        <text  class="tips_left">Tips：</text>
+        <text  class="tips_left valuefont">Tips：</text>
         <text  class="tips_right">{{currentTrainTips}}</text>
       </view>
     </view>

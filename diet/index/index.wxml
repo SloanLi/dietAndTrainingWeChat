@@ -1,15 +1,15 @@
 <view class="container">
   <!-- <view class="container_title">时间选择</view> -->
-  <view class="diet_box " >
-    <view  class="diet_item" bindtap="toDiet">
-      <text class="diet_label diet_text">摄入：</text>
-      <text class="diet_value diet_text">{{totalCalories}}</text>
+  <view class="diet_box "  bindtap="toDiet">
+    <view  class="diet_item shadow" >
+      <text class="diet_label  valuefont">摄入：</text>
+      <text class="diet_value valuefont diet_text">{{totalCalories}}</text>
     </view>
-    <view  class="diet_item" bindtap="toDiet">
+    <view  class="diet_item shadow">
       <text class="diet_label diet_text">还可以吃：</text>
-      <text class="diet_value diet_text {{budgetCalories<totalCalories?'redfont':''}}">{{budgetCalories-totalCalories}}</text>
+      <text class="diet_value valuefont diet_text {{budgetCalories<totalCalories?'redfont':''}}">{{budgetCalories-totalCalories}}</text>
     </view>
-    <view  class="diet_item" bindtap="toDiet">
+    <view  class="diet_item shadow">
       <text class="diet_label diet_text">推荐预算：</text>
       <text class="diet_value diet_text">{{budgetCalories}}</text>
     </view>
@@ -76,7 +76,7 @@
       <dt_content_row wx:for="{{evening.list}}" wx:for-item="item" wx:key="index" label="{{item.name}}" value="{{item.calories}}" />
     </view>
     <view class="diet_analysis"> 
-      <button class="">饮食分析</button>
+      <button class="" bindtap="toAnalysis">饮食分析</button>
       <text class="tips">完整录入三餐才准确</text>
     </view>
   </view>

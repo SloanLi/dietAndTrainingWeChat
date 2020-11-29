@@ -15,7 +15,9 @@ button{
   letter-spacing: 10rpx;
 }
 .danger_btn{
-  background: #ec2c61;
+}
+.cancel_btn{
+  background: #bbbbbb;
 }
 .line{
 display: inline-block;
@@ -27,4 +29,8 @@ display: inline-block;
 }
 .redfont{
   color:#ec2c61 !important;
+}
+.shadow{
+  box-shadow: 4rpx 4rpx 4rpx whitesmoke;
+
 }

@@ -7,7 +7,7 @@ Page({
   data: {
     inputShowed: false,
     inputVal: "",
-    show:false,
+    
     typeEums:{
       1:'添加早餐',
       2:'添加午餐',
@@ -16,6 +16,7 @@ Page({
       5:'添加下午加餐',
       6:'添加晚上加餐',
     },
+    show:true,
     buttons: [
       {
           type: 'default',
@@ -112,5 +113,10 @@ Page({
   },
   buttontap(e) {
       console.log(e.detail)
+  },
+  goBack(){
+    wx.navigateBack({
+      delta:1,
+    })
   }
 })

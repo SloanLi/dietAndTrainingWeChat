@@ -128,5 +128,10 @@ Page({
     this.setData({
       actionSheetShow:true
     })
+  },
+  toAnalysis(){
+    wx.navigateTo({
+      url: '../analysis/analysis',
+    })
   }
 })

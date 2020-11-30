@@ -76,6 +76,12 @@
         {
           "name": "analysis",
           "pathName": "diet/analysis/analysis",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "train",
+          "pathName": "train/index/index",
           "scene": null
         }
       ]

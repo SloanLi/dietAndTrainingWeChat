@@ -1,66 +1,73 @@
-// train/index/index.js
+    // page.js示例代码
+const originalData=[{trainName:"",trainCount:""}]
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+        data: {
+            dialogShow:false,
+            buttons: [{text: '取消'}, {text: '确定'}],
+            oneButton: [{text: '确定'}],
+            modifyData:[{trainName:"",trainCount:""}]
+        },
+        openDialog(e) {
+            this.setData({
+                dialogShow: true
+            })
+        },
+        tapDialogButton(e) {
+            const {detail:{item:{text},index}}=e
+            if(index){
+                this.postTrain()
+            }else{
+                this.setData({
+                    dialogShow: false,
+                    modifyData:originalData
+                })
+            }
+           
+        },
+        getTrainValue(e){
+         const {detail:{value},target:{dataset:{index,field}}}=e
+         const {data:{modifyData}}=this
+         const currentData=modifyData[index]
+         currentData[field]=value
+         modifyData.slice(index,1,currentData)
+         this.setData({
+             modifyData
+         })
+        },
+        addTrainInput(){
+            const {modifyData}=this.data;
+            if(modifyData.length>9){
+                return
+            }
+            modifyData.push({trainName:"",trainCount:""})
+            this.setData({
+                modifyData
+            })
+        },
+        postTrain(){
+            const {modifyData}=this.data
+            if(modifyData.length===0){
+                return
+            }
+            const vaild= modifyData.every(item=>{
+                return !item.trainName||!item.trainCount
+            })
+            if(vaild){
+                wx.showToast({
+                  title: '请补充数据',
+                  icon:"none"
+                })
+                return
+            }
+        },
+        deleteModifyData(e){
+            const {modifyData}=this.data
+            const {target:{dataset:{index}}}=e
+            console.log(index)
+            // modifyData.splice(index,1)
+            console.log(modifyData.splice(index,1))
+            this.setData({
+                modifyData
+            })
+        }
+    });

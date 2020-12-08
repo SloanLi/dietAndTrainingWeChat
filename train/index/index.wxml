@@ -1,2 +1,13 @@
-<!--train/index/index.wxml-->
-<text>train/index/index.wxml</text>
+<view class="container">
+  <dt_content_row label="哑铃" value="40kg"/>
+  <button bindtap="openDialog" class="mt">添加训练</button>
+  <mp-dialog title="添加训练" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view class="input" wx:for="{{modifyData}}"  wx:for-item="item" wx:key="index"  wx:for-index="index" wx:if="{{dialogShow}}">
+      <input placeholder="请输入训练名称" data-index="{{index}}"  data-field='trainName' bindblur="getTrainValue"/>
+      <input placeholder="重量（kg）" data-index="{{index}}"  data-field='trainCount' type="digit" bindblur="getTrainValue"/>
+      <view class="del_btn"  data-index="{{index}}" bindtap="deleteModifyData">删除</view>
+    </view>
+    <button bindtap="addTrainInput">添加</button>
+  </mp-dialog>
+  <dt_footer/>
+</view>

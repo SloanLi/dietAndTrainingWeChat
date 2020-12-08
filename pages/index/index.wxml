@@ -67,7 +67,7 @@
     <!-- 训练 -->
     <view class="tab_item" hidden="{{activeTab==='diet'}}">
       <view class="train_box" >
-        <dt_content_row label="哑铃推举" value='40kg' bind:rowTap="toTrain" />
+        <dt_content_row label="今日容量" value='40kg' bind:rowTap="toTrain" />
       </view>
       <button bindtap="toTrain">训练管理</button>
       <view class="tips">

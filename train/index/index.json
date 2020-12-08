@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "dt_footer":"/compontents/footer/footer",
+    "dt_content_row":"/compontents/contentRow",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
   "navigationBarTitleText": "训练管理"
 }
